@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Background Generator</title>
+		<style>
+			body {
+				background:#e2e2e2;
+			}
+		</style>
+	</head>
+	<body>
+		<h1>Background Generator</h1>
+		<input id="color1" type="color" value="#e2e2e2">
+		<input id="color2" type="color" value="#222222">
+		<h2>dfgdfg</h2>
+		<script>
+	
+			var color1 = document.getElementById("color1");
+			var color2 = document.getElementById("color2");
+
+			function gradient() {
+				document.body.style.background = "linear-gradient(to right,"+color1.value+","+color2.value+")";
+				document.querySelector("h2").innerHTML = document.body.style.background;
+			}
+
+			color1.addEventListener("input", gradient);
+			color2.addEventListener("input", gradient);
+
+		</script>
+	</body>
+</html>
